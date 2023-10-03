@@ -1,8 +1,15 @@
 import "./style.css";
 
 const myRange = document.getElementById("myRange");
+const mySize = document.getElementById("size");
 const image = document.querySelector(".image");
 const square = document.getElementById("square");
+
+size.addEventListener("change", (event) => {
+  console.log(event.target.value);
+  image.style.width = `${parseInt(event.target.value, 10)}px`;
+  image.style.height = `${parseInt(event.target.value, 10)}px`;
+});
 
 myRange.addEventListener("change", (event) => {
   image.style.borderRadius = `${parseInt(event.target.value, 10)}px`;

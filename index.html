@@ -12,7 +12,7 @@
       <p class="subtitle">
         Upload your image or try one of the provided options:
       </p>
-      <div>
+      <div id="square">
         <img
           src="./example/cat1.png"
           alt="cat1"
@@ -47,6 +47,17 @@
         >
           Image 3
         </button>
+      </div>
+      <div class="slidecontainer">
+        <label for="myRange">Adjust image size:</label>
+        <input
+          type="range"
+          min="75"
+          max="250"
+          value="50"
+          class="slider"
+          id="size"
+        />
       </div>
       <div class="slidecontainer">
         <label for="myRange">Adjust border radius:</label>
