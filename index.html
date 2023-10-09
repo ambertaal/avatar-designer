@@ -4,24 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Vite App</title>
   </head>
   <body>
     <div id="app">
       <h1 class="title">Avatar designer (Beginner)</h1>
+
       <p class="subtitle">
         Upload your image or try one of the provided options:
       </p>
-      <div id="square">
-        <img
-          src="./example/cat1.png"
-          alt="cat1"
-          id="image"
-          class="image"
-          width="150"
-          height="150"
-        />
+      <div class="image-wrapper">
+        <div id="image-container" class="image-container">
+          <img src="./example/cat1.png" alt="cat1" id="image" class="image" />
+        </div>
       </div>
+
       <div class="image-button">
         <button
           id="image1"
@@ -48,28 +46,33 @@
           Image 3
         </button>
       </div>
-      <div class="slidecontainer">
-        <label for="myRange">Adjust image size:</label>
+
+      <div class="slide-container">
+        <label for="image-size-range">Adjust image size:</label>
         <input
+          name="image-size-range"
           type="range"
-          min="75"
+          min="50"
           max="250"
-          value="50"
+          value="150"
           class="slider"
           id="size"
         />
       </div>
-      <div class="slidecontainer">
-        <label for="myRange">Adjust border radius:</label>
+
+      <div class="slide-container">
+        <label for="border-radius-range">Adjust border radius:</label>
         <input
+          name="border-radius-range"
           type="range"
-          min="1"
-          max="100"
-          value="50"
+          min="0"
+          max="50"
+          value="0"
           class="slider"
           id="myRange"
         />
       </div>
+
       <div class="color-picker-input">
         <label for="favcolor">Select your favorite color:</label>
         <input type="color" id="favcolor" name="favcolor" value="#ff851a" />
